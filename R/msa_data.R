@@ -30,8 +30,8 @@ msa_data <- function(tidymsa, font = "helvetical",
                      use_dot = FALSE,
                      disagreement = TRUE,
                      ignore_gaps = FALSE,
-                     bias_cons = 0.5
-                     ref = NULL) {
+                     ref = NULL,
+                     bias_cons = 0.5) {
 
     if (is.null(custom_color)) {
         color <- match.arg(color, c("Clustal", "Chemistry_AA", "Shapely_AA", "Zappo_AA", "Taylor_AA","Chemistry_NT",
