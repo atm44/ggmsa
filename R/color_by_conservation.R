@@ -1,6 +1,8 @@
 color_increment <- function(conservation_visibility,bias_cons){
     lapply(1:nrow(conservation_visibility), function(i){
         color_ramp <- colorRampPalette(colors = c(conservation_visibility[i,"color"],"#ffffff", "#ffffff"),bias = bias_cons)
+        print(bias_cons)
+        print(color_ramp(100))
         color_change <- rev(color_ramp(100))[conservation_visibility[i,"visibility"]]
         return(color_change)
         }) %>% unlist #%>% do.call("rbind",.)
