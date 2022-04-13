@@ -32,7 +32,7 @@ devtools:
 ``` r
 if (!requireNamespace("devtools", quietly=TRUE))
     install.packages("devtools")
-devtools::install_github("YuLab-SMU/ggmsa")
+devtools::install_github("atm44/ggmsa")
 ```
 
 ## :bulb: Quick Example
