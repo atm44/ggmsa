@@ -44,6 +44,7 @@ geom_msa <- function(data, font = "helvetical",
                      ref = NULL,
                      position = "identity",
                      show.legend = FALSE,
+                     bias_cons = 0.5,
                      ... ) {
 
     data <- msa_data(data,
@@ -56,7 +57,8 @@ geom_msa <- function(data, font = "helvetical",
                      use_dot = use_dot,
                      disagreement = disagreement,
                      ignore_gaps = ignore_gaps,
-                     ref = ref)
+                     ref = ref,
+                     bias_cons = bias_cons)
 
     #legend work
     xx <- data[,c("character","color")] %>% unique()
