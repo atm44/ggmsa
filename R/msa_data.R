@@ -30,6 +30,7 @@ msa_data <- function(tidymsa, font = "helvetical",
                      use_dot = FALSE,
                      disagreement = TRUE,
                      ignore_gaps = FALSE,
+                     bias_cons = 0.5
                      ref = NULL) {
 
     if (is.null(custom_color)) {
@@ -60,7 +61,7 @@ msa_data <- function(tidymsa, font = "helvetical",
     }
 
     if (by_conservation){
-        y <- color_visibility(y)
+        y <- color_visibility(y, bias_cons)
     }
 
 
