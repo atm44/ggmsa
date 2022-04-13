@@ -17,6 +17,6 @@ color_visibility <- function(y,bias_cons){
     names(conser_data)[3] <- "position"
     y_filter <- y[c(-1,-3)] #%>% unique
     conser_ready <- merge(conser_data, y_filter)
-    y$color <- color_increment(conser_ready)
+    y$color <- color_increment(conser_ready,bias_cons)
     return(y)
 }
