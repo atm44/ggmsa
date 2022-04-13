@@ -71,7 +71,8 @@ ggmsa <- function(msa,
                   disagreement = TRUE,
                   ignore_gaps = FALSE,
                   ref = NULL,
-                  show.legend = FALSE) {
+                  show.legend = FALSE,
+                  bias_cons = 0.5) {
 
     data <- tidy_msa(msa, start = start, end = end)
 
@@ -89,7 +90,8 @@ ggmsa <- function(msa,
                         disagreement = disagreement,
                         ignore_gaps = ignore_gaps,
                         ref = ref,
-                        show.legend = show.legend) +
+                        show.legend = show.legend,
+                        bias_cons = 0.5) +
                theme_msa()
 
 }
