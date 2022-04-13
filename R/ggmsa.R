@@ -91,7 +91,7 @@ ggmsa <- function(msa,
                         ignore_gaps = ignore_gaps,
                         ref = ref,
                         show.legend = show.legend,
-                        bias_cons = 0.5) +
+                        bias_cons = bias_cons) +
                theme_msa()
 
 }
